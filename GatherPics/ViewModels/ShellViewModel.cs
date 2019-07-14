@@ -63,32 +63,31 @@ namespace PngCollector.ViewModels
             {
                 var counter = 0;
                 var currentFolderName = Path.Combine(WorkingDirectory, GenerateFolderNameBaseOnDateTime());
-
-                foreach (var folder in Folders)
+                using (var db = new Database())
                 {
-                    var files = Directory.GetFiles(folder.Path, "*.png", SearchOption.AllDirectories);
-                    foreach (var file in files)
+                    foreach (var folder in Folders)
                     {
-                        if (counter == ImagePerFolder)
+                        var files = Directory.GetFiles(folder.Path, "*.png", SearchOption.AllDirectories);
+                        foreach (var file in files)
                         {
-                            currentFolderName = Path.Combine(WorkingDirectory, GenerateFolderNameBaseOnDateTime());
-                            counter = 0;
-                        }
+                            if (counter == ImagePerFolder)
+                            {
+                                currentFolderName = Path.Combine(WorkingDirectory, GenerateFolderNameBaseOnDateTime());
+                                counter = 0;
+                            }
 
-                        Directory.CreateDirectory(currentFolderName);
-                        var destinationFileName = Path.Combine(currentFolderName, Guid.NewGuid() + "." + Path.GetFileName(file));
-                        File.Copy(file, destinationFileName);
-                        using (var db = new Database())
-                        {
+                            Directory.CreateDirectory(currentFolderName);
+                            var destinationFileName = Path.Combine(currentFolderName, Guid.NewGuid() + "." + Path.GetFileName(file));
+                            File.Copy(file, destinationFileName);
+
                             db.PicFiles.Add(new PicFile
                             {
                                 CurrentLocation = destinationFileName,
                                 OriginalLocation = file
                             });
                             db.SaveChanges();
+                            counter++;
                         }
-
-                        counter++;
                     }
                 }
             });
