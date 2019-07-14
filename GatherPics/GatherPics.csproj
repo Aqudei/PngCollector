@@ -26,7 +26,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>http://figuromomodels.com/PngCollector/GatherPics/publish/</InstallUrl>
-    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationRevision>6</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -166,6 +166,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\amd64\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest">
+      <Link>amd64\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest</Link>
+    </None>
+    <None Include="..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\x86\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest">
+      <Link>x86\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest</Link>
+    </None>
     <None Include="GatherPics_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\app.manifest" />
@@ -194,6 +200,56 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\amd64\Microsoft.VC90.CRT\msvcr90.dll">
+      <Link>amd64\Microsoft.VC90.CRT\msvcr90.dll</Link>
+    </Content>
+    <Content Include="..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\x86\Microsoft.VC90.CRT\msvcr90.dll">
+      <Link>x86\Microsoft.VC90.CRT\msvcr90.dll</Link>
+    </Content>
+    <Resource Include="..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\x86\Microsoft.VC90.CRT\README_ENU.txt">
+      <Link>x86\Microsoft.VC90.CRT\README_ENU.txt</Link>
+    </Resource>
+    <Content Include="..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\x86\sqlceca40.dll">
+      <Link>x86\sqlceca40.dll</Link>
+    </Content>
+    <Content Include="..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\x86\sqlcecompact40.dll">
+      <Link>x86\sqlcecompact40.dll</Link>
+    </Content>
+    <Content Include="..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\x86\sqlceer40EN.dll">
+      <Link>x86\sqlceer40EN.dll</Link>
+    </Content>
+    <Content Include="..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\x86\sqlceme40.dll">
+      <Link>x86\sqlceme40.dll</Link>
+    </Content>
+    <Content Include="..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\x86\sqlceqp40.dll">
+      <Link>x86\sqlceqp40.dll</Link>
+    </Content>
+    <Content Include="..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\x86\sqlcese40.dll">
+      <Link>x86\sqlcese40.dll</Link>
+    </Content>
+    <Resource Include="..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\amd64\Microsoft.VC90.CRT\README_ENU.txt">
+      <Link>amd64\Microsoft.VC90.CRT\README_ENU.txt</Link>
+    </Resource>
+    <Content Include="..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\amd64\sqlceca40.dll">
+      <Link>amd64\sqlceca40.dll</Link>
+    </Content>
+    <Content Include="..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\amd64\sqlcecompact40.dll">
+      <Link>amd64\sqlcecompact40.dll</Link>
+    </Content>
+    <Content Include="..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\amd64\sqlceer40EN.dll">
+      <Link>amd64\sqlceer40EN.dll</Link>
+    </Content>
+    <Content Include="..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\amd64\sqlceme40.dll">
+      <Link>amd64\sqlceme40.dll</Link>
+    </Content>
+    <Content Include="..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\amd64\sqlceqp40.dll">
+      <Link>amd64\sqlceqp40.dll</Link>
+    </Content>
+    <Content Include="..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\amd64\sqlcese40.dll">
+      <Link>amd64\sqlcese40.dll</Link>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
