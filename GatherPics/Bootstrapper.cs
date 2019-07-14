@@ -1,14 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using Caliburn.Micro;
-using GatherPics.ViewModels;
 using MahApps.Metro.Controls.Dialogs;
+using PngCollector.ViewModels;
 
-namespace GatherPics
+namespace PngCollector
 {
     class Bootstrapper : BootstrapperBase
     {

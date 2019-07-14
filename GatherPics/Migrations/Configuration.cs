@@ -1,18 +1,16 @@
-namespace GatherPics.Migrations
-{
-    using System;
-    using System.Data.Entity;
-    using System.Data.Entity.Migrations;
-    using System.Linq;
+using System.Data.Entity.Migrations;
+using Database = PngCollector.Models.Database;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<GatherPics.Models.Database>
+namespace PngCollector.Migrations
+{
+    internal sealed class Configuration : DbMigrationsConfiguration<Database>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(GatherPics.Models.Database context)
+        protected override void Seed(Database context)
         {
             //  This method will be called after migrating to the latest version.
 

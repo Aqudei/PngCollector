@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Caliburn.Micro;
-using GatherPics.Models;
 using MahApps.Metro.Controls.Dialogs;
 using Microsoft.WindowsAPICodePack.Dialogs;
+using PngCollector.Models;
 
-namespace GatherPics.ViewModels
+namespace PngCollector.ViewModels
 {
     class ShellViewModel : Screen
     {
