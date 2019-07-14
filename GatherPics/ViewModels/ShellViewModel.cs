@@ -167,7 +167,7 @@ namespace PngCollector.ViewModels
                         var picFile = db.PicFiles.FirstOrDefault(file => file.CurrentLocation == png);
                         if (picFile != null)
                         {
-                            File.Copy(png, picFile.OriginalLocation);
+                            File.Copy(png, picFile.OriginalLocation, true);
                         }
                     }
                 }
